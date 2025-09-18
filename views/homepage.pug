@@ -1,0 +1,53 @@
+//- doctype html
+//- html
+//-   head
+//-     title= title
+//-   body
+//-     h1 HubSpot Custom Object Records
+
+//-     a(href="/update-cobj") Add to this table
+//-     br
+//-     br
+
+//-     if pets.length
+//-       table(border="1" cellpadding="8")
+//-         thead
+//-           tr
+//-             th ID
+//-             th Pet Name
+//-             th Type
+//-             th Breed
+//-         tbody
+//-           each pet in pets
+//-             tr
+//-               td= pet.id
+//-               td= pet.properties.pet_name
+//-               td= pet.properties.type
+//-               td= pet.properties.breed
+//-     else
+//-       p No records found. Click "Add to this table" to create one.
+
+
+
+
+doctype html
+html
+  head
+    title= title
+  body
+    h1 Custom Object Records
+    a(href="/update-cobj") Add to this table
+    table(border="1")
+      thead
+        tr
+          th ID
+          th Pet Name
+          th Type
+          th Breed
+      tbody
+        each record in records
+          tr
+            td= record.id
+            td= record.properties.pet_name
+            td= record.properties.type
+            td= record.properties.breed
